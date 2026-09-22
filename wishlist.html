@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wishlist | COFYBREW Coffee Shop</title>
+<link rel="icon" type="image/svg+xml" href="assets/svg icon.svg">
+<meta name="description" content="Your saved COFYBREW products.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="inner-page wishlist-page">
+<nav class="navbar navbar-expand-lg navbar-dark inner-navbar">
+<div class="container">
+<a class="navbar-brand" href="index.html"><img src="assets/Logo.png" alt="COFYBREW Logo" height="40"></a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+<ul class="navbar-nav">
+<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+<li class="nav-item"><a class="nav-link" href="journal.html">Journal</a></li>
+<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div class="navbar-icons d-none d-lg-flex align-items-center">
+<a href="#" data-bs-toggle="modal" data-bs-target="#searchModal" aria-label="Search"><i class="bi bi-search"></i></a>
+<a href="wishlist.html" class="active-icon" aria-label="Wishlist"><i class="bi bi-heart navbar-heart-icon"></i></a>
+<a href="login.html" aria-label="Account"><i class="bi bi-person"></i></a>
+<a href="cart.html" class="position-relative" aria-label="Cart"><i class="bi bi-cart3"></i><span class="cart-badge">0</span></a>
+<a href="shop.html" class="btn btn-gold ms-3 wishlist-order-btn">Order Now &rarr;</a>
+</div>
+</div>
+</nav>
+
+<section class="wishlist-hero" style="background-image:url('assets/anthor.png');">
+<div class="wishlist-hero-overlay"></div>
+<div class="container position-relative">
+<div class="wishlist-hero-content">
+<nav class="wishlist-breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><i class="bi bi-chevron-right"></i><span>Wishlist</span></nav>
+<h1>Your Wishlist</h1>
+<p>Keep track of your favorite items.<br>Review your wishlist and make a purchase.</p>
+</div>
+</div>
+</section>
+
+<main class="wishlist-main">
+<div class="container">
+<div class="wishlist-heading">
+<div>
+<nav class="wishlist-page-breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><i class="bi bi-chevron-right"></i><span>Wishlist</span></nav>
+<h2>My Wishlist</h2>
+</div>
+<div id="wishlist-count" class="wishlist-count">0 items</div>
+</div>
+<div class="row g-4" id="wishlist-grid"></div>
+</div>
+</main>
+
+<footer class="footer">
+<div class="footer-overlay"></div>
+<div class="container position-relative z-2">
+<div class="row">
+<div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+<a href="index.html" class="text-white text-decoration-none d-flex align-items-center gap-2 mb-3"><img src="assets/Logo.png" alt="COFYBREW Logo" height="40"></a>
+<div class="footer-logo-text mt-4">Crafted for<br>Brighter Days.</div>
+<div class="social-icons mt-3">
+<a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="#" aria-label="Twitter X"><i class="bi bi-twitter-x"></i></a><a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+</div>
+</div>
+<div class="col-lg-2 col-md-6 mb-4 mb-lg-0 mt-3 mt-lg-0"><h5>Explore</h5><ul class="footer-links">
+<li><a href="index.html">Home</a></li><li><a href="shop.html">Shop</a></li><li><a href="about.html">About</a></li><li><a href="journal.html">Journal</a></li><li><a href="contact.html">Contact</a></li>
+</ul></div>
+<div class="col-lg-2 col-md-6 mb-4 mb-md-0 mt-3 mt-lg-0"><h5>Support</h5><ul class="footer-links">
+<li><a href="contact.html#faqSection">FAQ</a></li><li><a href="contact.html">Shipping Info</a></li><li><a href="contact.html">Returns</a></li><li><a href="shop.html">Size Guide</a></li><li><a href="contact.html">Privacy Policy</a></li><li><a href="contact.html">Terms of Service</a></li>
+</ul></div>
+<div class="col-lg-4 col-md-6 offset-lg-1 mt-3 mt-lg-0"><h5>Stay in Touch</h5><p class="text-light footer-stay-desc">Get the latest news, brewing guides, and special offers.</p>
+<form class="newsletter-form" id="footerNewsletterForm"><input type="email" placeholder="Your email" aria-label="Email address" required><button type="submit" aria-label="Subscribe"><i class="bi bi-arrow-right"></i></button></form>
+</div>
+</div>
+<div class="footer-bottom"><div>&copy; 2026 COFYBREW. All rights reserved.</div><div class="footer-credits"><span>Created &amp; Developed by <a href="https://www.linkedin.com/in/nouramaherelamin/" target="_blank" rel="noopener noreferrer">Noura Maher Elamin</a></span><a href="https://github.com/nouramaherelamin" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> GitHub</a></div></div>
+</div>
+</footer>
+
+<div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content border-0"><div class="modal-body p-4 p-md-5">
+<div class="d-flex justify-content-between align-items-center mb-4"><h4 class="mb-0 font-heading">What are you looking for?</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+<form id="searchForm"><div class="input-group input-group-lg mb-3"><span class="input-group-text bg-white border-end-0"><i class="bi bi-search text-muted"></i></span><input type="search" class="form-control border-start-0 ps-0 shadow-none" id="searchInput" placeholder="Search coffee, beans, accessories..." required></div></form>
+<div id="searchResults" class="mt-4"><p class="text-muted small">Start typing to search...</p></div>
+</div></div></div>
+</div>
+<button id="backToTop" class="back-to-top-btn" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/products.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="assets/svg icon.svg">
+  <title>Journal | COFYBREW Coffee Shop</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="inner-page">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark inner-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" aria-label="COFYBREW Home">
+        <img src="assets/Logo.png" alt="COFYBREW Logo" height="40">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="journal.html">Journal</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="navbar-icons d-none d-lg-flex align-items-center">
+        <a href="#" aria-label="Search" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="bi bi-search"></i></a>
+        <a href="wishlist.html" aria-label="Wishlist"><i class="bi bi-heart navbar-heart-icon"></i></a>
+        <a href="login.html" aria-label="Account"><i class="bi bi-person"></i></a>
+        <a href="cart.html" aria-label="Cart" class="position-relative">
+          <i class="bi bi-cart3"></i>
+          <span class="cart-badge">0</span>
+        </a>
+        <a href="shop.html" class="btn btn-gold ms-3" style="font-size: 0.85rem; padding: 8px 16px;">Order Now &rarr;</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Banner -->
+  <section class="inner-page-hero" style="background-image: url('assets/anthor.png');">
+    <div class="inner-page-hero-overlay"></div>
+    <div class="container position-relative">
+      <div class="inner-page-hero-content">
+        <div class="inner-page-breadcrumb">
+          <a href="index.html">Home</a> <i class="bi bi-chevron-right" style="font-size:11px;"></i> <span>Journal</span>
+        </div>
+        <h1>Stories &amp; Brews</h1>
+        <p>Tips, guides, and thoughts on coffee culture.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="container my-5">
+    
+    <!-- Journal Search -->
+    <div class="d-flex justify-content-center mb-4">
+      <div class="input-group" style="max-width: 480px;">
+        <span class="input-group-text bg-white border-end-0"><i class="bi bi-search text-muted"></i></span>
+        <input type="text" class="form-control border-start-0 shadow-none" id="journalSearchInput" placeholder="Search articles...">
+      </div>
+    </div>
+
+    <!-- Article Categories -->
+    <ul class="nav nav-pills justify-content-center mb-5 custom-pills">
+      <li class="nav-item">
+        <a class="nav-link active rounded-pill px-4" href="#" data-cat="all" style="background-color: var(--gold); border-color: var(--gold);">All</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-dark rounded-pill px-4" href="#" data-cat="Brewing Guides">Brewing Guides</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-dark rounded-pill px-4" href="#" data-cat="Farm Stories">Farm Stories</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-dark rounded-pill px-4" href="#" data-cat="Recipes">Recipes</a>
+      </li>
+    </ul>
+
+    <!-- Article Grid -->
+    <div class="row g-4 mb-5" id="journalGrid">
+      <!-- Article 1 -->
+      <div class="col-lg-4 col-md-6 journal-item" data-category="Farm Stories">
+        <div class="journal-card journal-card-article" onclick="openArticleModal('The Journey of a Coffee Bean', 'assets/journal4.png', 'MAY 10, 2026', 'From the high altitudes of Colombia to your morning cup, follow the incredible journey of our organic beans. This is a longer version of the text to show inside the modal, discussing the meticulous process of harvesting and roasting that makes COFYBREW unique.')">
+          <img src="assets/journal4.png" alt="Coffee beans" class="journal-img">
+          <div class="journal-content">
+            <span class="journal-date">MAY 10, 2026</span>
+            <h3 class="journal-card-title">The Journey of a Coffee Bean</h3>
+            <p class="text-muted small">From the high altitudes of Colombia to your morning cup, follow the incredible journey of our organic beans.</p>
+            <span class="journal-link text-gold">Read More &rarr;</span>
+          </div>
+        </div>
+      </div>
+      <!-- Article 2 -->
+      <div class="col-lg-4 col-md-6 journal-item" data-category="Brewing Guides">
+        <div class="journal-card journal-card-article" onclick="openArticleModal('Grinding Guide: Find Your Flavor', 'assets/journal5.png', 'MAY 7, 2026', 'Choosing the right grind size is the most important step for the perfect brew. Learn how to match grind to method, whether you are using a French press (coarse), drip (medium), or espresso (fine).')">
+          <img src="assets/journal5.png" alt="Ground coffee" class="journal-img">
+          <div class="journal-content">
+            <span class="journal-date">MAY 7, 2026</span>
+            <h3 class="journal-card-title">Grinding Guide: Find Your Flavor</h3>
+            <p class="text-muted small">Choosing the right grind size is the most important step for the perfect brew. Learn how to match grind to method.</p>
+            <span class="journal-link text-gold">Read More &rarr;</span>
+          </div>
+        </div>
+      </div>
+      <!-- Article 3 -->
+      <div class="col-lg-4 col-md-6 journal-item" data-category="Recipes">
+        <div class="journal-card journal-card-article" onclick="openArticleModal('Coffee &amp; Desserts: A Perfect Match', 'assets/journal7.png', 'APR 30, 2026', 'Pairing coffee with food enhances both experiences. Discover our favorite coffee and dessert combinations, from dark roasts paired with rich chocolate cake, to bright African beans paired with citrus tarts.')">
+          <img src="assets/journal7.png" alt="Coffee dessert" class="journal-img">
+          <div class="journal-content">
+            <span class="journal-date">APR 30, 2026</span>
+            <h3 class="journal-card-title">Coffee &amp; Desserts: A Perfect Match</h3>
+            <p class="text-muted small">Pairing coffee with food enhances both experiences. Discover our favorite coffee and dessert combinations.</p>
+            <span class="journal-link text-gold">Read More &rarr;</span>
+          </div>
+        </div>
+      </div>
+      <!-- Article 4 -->
+      <div class="col-lg-4 col-md-6 journal-item" data-category="Brewing Guides">
+        <div class="journal-card journal-card-article" onclick="openArticleModal('Mastering the Pour Over', 'assets/journal1.png', 'APR 15, 2026', 'A step-by-step guide to achieving the perfect pour-over coffee at home, just like your favorite barista. You will need a scale, a gooseneck kettle, and fresh beans to extract the brightest, cleanest flavor.')">
+          <img src="assets/journal1.png" alt="Barista pouring coffee" class="journal-img">
+          <div class="journal-content">
+            <span class="journal-date">APR 15, 2026</span>
+            <h3 class="journal-card-title">Mastering the Pour Over</h3>
+            <p class="text-muted small">A step-by-step guide to achieving the perfect pour-over coffee at home, just like your favorite barista.</p>
+            <span class="journal-link text-gold">Read More &rarr;</span>
+          </div>
+        </div>
+      </div>
+      <!-- Article 5 -->
+      <div class="col-lg-4 col-md-6 journal-item" data-category="Recipes">
+        <div class="journal-card journal-card-article" onclick="openArticleModal('Recipe: Classic Espresso Cake', 'assets/journal2.png', 'APR 2, 2026', 'Bake this delicious, moist espresso cake using our signature Dark Roast blend. Perfect for weekend mornings. Mix 2 shots of fresh espresso directly into the batter for a rich, deep flavor profile.')">
+          <img src="assets/journal2.png" alt="Coffee cake" class="journal-img" style="object-fit: cover; background-color: var(--cream);">
+          <div class="journal-content">
+            <span class="journal-date">APR 2, 2026</span>
+            <h3 class="journal-card-title">Recipe: Classic Espresso Cake</h3>
+            <p class="text-muted small">Bake this delicious, moist espresso cake using our signature Dark Roast blend. Perfect for weekend mornings.</p>
+            <span class="journal-link text-gold">Read More &rarr;</span>
+          </div>
+        </div>
+      </div>
+      <!-- Article 6 -->
+      <div class="col-lg-4 col-md-6 journal-item" data-category="Brewing Guides">
+        <div class="journal-card journal-card-article" onclick="openArticleModal('The Secret to Cold Brew', 'assets/journal3.png', 'MAR 28, 2026', 'Why cold brew is smoother, less acidic, and how you can make a batch in your fridge overnight. Steep coarsely ground beans in cold water for 12-24 hours for a perfectly balanced summer drink.')">
+          <img src="assets/journal3.png" alt="Iced coffee" class="journal-img" style="object-fit: cover; background-color: var(--cream);">
+          <div class="journal-content">
+            <span class="journal-date">MAR 28, 2026</span>
+            <h3 class="journal-card-title">The Secret to Cold Brew</h3>
+            <p class="text-muted small">Why cold brew is smoother, less acidic, and how you can make a batch in your fridge overnight.</p>
+            <span class="journal-link text-gold">Read More &rarr;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-overlay"></div>
+    <div class="container position-relative z-2">
+      <div class="row">
+        <!-- Brand -->
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <a href="index.html" class="text-white text-decoration-none d-flex align-items-center gap-2 mb-3">
+            <img src="assets/Logo.png" alt="COFYBREW Logo" height="40">
+          </a>
+          <div class="footer-logo-text mt-4">Crafted for<br>Brighter Days.</div>
+          <div class="social-icons mt-3">
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Twitter X"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <!-- Explore -->
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0 mt-3 mt-lg-0">
+          <h5>Explore</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="journal.html">Journal</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Support -->
+        <div class="col-lg-2 col-md-6 mb-4 mb-md-0 mt-3 mt-lg-0">
+          <h5>Support</h5>
+          <ul class="footer-links">
+            <li><a href="contact.html#faqSection">FAQ</a></li>
+            <li><a href="contact.html">Shipping Info</a></li>
+            <li><a href="contact.html">Returns</a></li>
+            <li><a href="shop.html">Size Guide</a></li>
+            <li><a href="contact.html">Privacy Policy</a></li>
+            <li><a href="contact.html">Terms of Service</a></li>
+          </ul>
+        </div>
+        <!-- Stay in Touch -->
+        <div class="col-lg-4 col-md-6 offset-lg-1 mt-3 mt-lg-0">
+          <h5>Stay in Touch</h5>
+          <p class="text-light" style="opacity:0.8; font-size:0.9rem;">Get the latest news, brewing guides, and special offers.</p>
+          <form class="newsletter-form" id="footerNewsletterForm">
+            <input type="email" placeholder="Your email" aria-label="Email address" required>
+            <button type="submit" aria-label="Subscribe"><i class="bi bi-arrow-right"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 COFYBREW. All rights reserved.</div>
+        <div class="footer-credits">
+          <span>Created &amp; Developed by <a href="https://www.linkedin.com/in/nouramaherelamin/" target="_blank" rel="noopener noreferrer">Noura Maher Elamin</a></span>
+          <a href="https://github.com/nouramaherelamin" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="bi bi-github"></i> GitHub</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SEARCH MODAL -->
+  <div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content border-0">
+        <div class="modal-body p-4 p-md-5">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h4 class="mb-0 font-heading">What are you looking for?</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <form id="searchForm">
+            <div class="input-group input-group-lg mb-3">
+              <span class="input-group-text bg-white border-end-0"><i class="bi bi-search text-muted"></i></span>
+              <input type="search" class="form-control border-start-0 ps-0 shadow-none" id="searchInput" placeholder="Search coffee, beans, accessories..." required>
+            </div>
+          </form>
+          <div id="searchResults" class="mt-4">
+            <p class="text-muted small">Start typing to search...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ARTICLE MODAL -->
+  <div class="modal fade" id="articleModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content border-0">
+        <div class="modal-body p-4 p-md-5">
+          <div class="d-flex justify-content-end mb-3">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <img src="" id="articleModalImg" alt="Article Image" class="img-fluid rounded mb-4" style="max-height: 400px; width: 100%; object-fit: cover;">
+          <span class="text-muted small d-block mb-2" id="articleModalDate"></span>
+          <h2 class="font-heading fw-bold mb-4" id="articleModalTitle"></h2>
+          <p class="text-dark" id="articleModalBody" style="line-height: 1.8;"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button id="backToTop" class="back-to-top-btn" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Scripts — correct order: Bootstrap → products → auth → script → journal -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/journal.js"></script>
+
+  <!-- openArticleModal — called via inline onclick on journal cards -->
+  <script>
+    function openArticleModal(title, imgSrc, date, body) {
+      var modal = document.getElementById('articleModal');
+      if (!modal) return;
+      var modalTitle = modal.querySelector('#articleModalTitle');
+      var modalDate  = modal.querySelector('#articleModalDate');
+      var modalImg   = modal.querySelector('#articleModalImg');
+      var modalBody  = modal.querySelector('#articleModalBody');
+      if (modalTitle) modalTitle.textContent = title;
+      if (modalDate)  modalDate.textContent  = date;
+      if (modalImg)  { modalImg.src = imgSrc; modalImg.alt = title; }
+      if (modalBody)  modalBody.textContent  = body;
+      var bsModal = bootstrap.Modal.getOrCreateInstance(modal);
+      bsModal.show();
+    }
+  </script>
+</body>
+</html>

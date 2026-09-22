@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="assets/svg icon.svg">
+  <title>COFYBREW | More Than Just Coffee</title>
+  <meta name="description" content="COFYBREW — Premium coffee brand. Carefully selected beans, ethically sourced, roasted to perfection.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+  <!-- 1. NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark position-absolute w-100" style="z-index: 1050;">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" aria-label="COFYBREW Coffee Shop">
+        <img src="assets/Logo.png" alt="COFYBREW Coffee Shop Logo" class="site-logo">
+      </a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="journal.html">Journal</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+        </ul>
+      </div>
+      
+      <div class="navbar-icons d-none d-lg-flex">
+        <a href="#" aria-label="Search" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="bi bi-search"></i></a>
+        <a href="wishlist.html" aria-label="Wishlist"><i class="bi bi-heart navbar-heart-icon"></i></a>
+        <a href="login.html" aria-label="Account"><i class="bi bi-person"></i></a>
+        <a href="cart.html" aria-label="Cart" class="position-relative">
+          <i class="bi bi-cart3"></i>
+          <span class="cart-badge">0</span>
+        </a>
+        <a href="shop.html" class="btn btn-gold ms-3 py-2 px-3" style="font-size: 0.85rem;">Order Now &rarr;</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 2. HERO SECTION -->
+  <div id="heroCarousel" class="carousel slide carousel-fade hero-section" data-bs-ride="carousel" data-bs-interval="5000">
+    <div class="carousel-indicators hero-slider-indicators">
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner h-100">
+      <!-- Slide 1 -->
+      <div class="carousel-item active h-100" style="background-image: url('assets/hero.png'); background-size: cover; background-position: center;">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content h-100 d-flex align-items-center">
+          <div class="row w-100">
+            <div class="col-lg-7">
+              <div class="hero-label fade-in-up">100% NATURAL</div>
+              <h1 class="hero-title fade-in-up" style="animation-delay: 0.1s;">More Than<br>Just Coffee</h1>
+              <p class="hero-desc fade-in-up" style="animation-delay: 0.2s;">From bean to cup &mdash; pure flavor, real stories, a brighter tomorrow.</p>
+              
+              <div class="d-flex gap-3 flex-wrap fade-in-up" style="animation-delay: 0.3s;">
+                <a href="shop.html" class="btn btn-gold">Shop Coffee &rarr;</a>
+                <a href="about.html" class="btn btn-outline-light">Explore Our Story</a>
+              </div>
+              
+              <div class="hero-features fade-in-up" style="animation-delay: 0.4s;">
+                <div class="hero-feature">
+                  <i class="bi bi-diagram-3"></i>
+                  <div class="hero-feature-text">
+                    <h6>100%</h6>
+                    <p>Natural Beans</p>
+                  </div>
+                </div>
+                <div class="hero-feature">
+                  <i class="bi bi-flower1"></i>
+                  <div class="hero-feature-text">
+                    <h6>Premium</h6>
+                    <p>Arabica Beans</p>
+                  </div>
+                </div>
+                <div class="hero-feature">
+                  <i class="bi bi-cup-hot"></i>
+                  <div class="hero-feature-text">
+                    <h6>Rich Flavor</h6>
+                    <p>In Every Cup</p>
+                  </div>
+                </div>
+                <div class="hero-feature">
+                  <i class="bi bi-suit-heart"></i>
+                  <div class="hero-feature-text">
+                    <h6>Sustainably</h6>
+                    <p>Sourced</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="carousel-item h-100" style="background-image: url('assets/hero1.png'); background-size: cover; background-position: center;">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content h-100 d-flex align-items-center">
+          <div class="row w-100">
+            <div class="col-lg-7">
+              <div class="hero-label">ROASTED DAILY</div>
+              <h1 class="hero-title">Experience<br>True Aroma</h1>
+              <p class="hero-desc">Discover the art of roasting with our carefully selected blends.</p>
+              <div class="d-flex gap-3 flex-wrap">
+                <a href="shop.html" class="btn btn-gold">View Blends &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="carousel-item h-100" style="background-image: url('assets/hero2.png'); background-size: cover; background-position: center;">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content h-100 d-flex align-items-center">
+          <div class="row w-100">
+            <div class="col-lg-7">
+              <div class="hero-label">SUSTAINABLE</div>
+              <h1 class="hero-title">Ethically<br>Sourced</h1>
+              <p class="hero-desc">We work directly with farmers to ensure fair trade and better communities.</p>
+              <div class="d-flex gap-3 flex-wrap">
+                <a href="about.html" class="btn btn-gold">Our Impact &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev hero-arrow left" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <i class="bi bi-chevron-left"></i>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next hero-arrow right" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <i class="bi bi-chevron-right"></i>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+<!-- 3. CATEGORY NAVIGATION -->
+<section class="shop-category-bar">
+  <div class="shop-category-container">
+    <div class="shop-category-wrapper" id="categoryContainer">
+
+      <a href="#" class="shop-cat-item" data-category="Coffee Beans">
+        <img src="assets/menu/top icon shop1.png" alt="Coffee Beans" class="shop-cat-img">
+        <div class="shop-cat-title">Coffee Beans</div>
+        <div class="shop-cat-count" data-cat-count="Coffee Beans">— Products</div>
+      </a>
+
+      <a href="#" class="shop-cat-item" data-category="Ground Coffee">
+        <img src="assets/menu/top icon shop2.png" alt="Ground Coffee" class="shop-cat-img">
+        <div class="shop-cat-title">Ground Coffee</div>
+        <div class="shop-cat-count" data-cat-count="Ground Coffee">— Products</div>
+      </a>
+
+      <a href="#" class="shop-cat-item" data-category="Machines">
+        <img src="assets/menu/top icon shop3.png" alt="Machines" class="shop-cat-img">
+        <div class="shop-cat-title">Machines</div>
+        <div class="shop-cat-count" data-cat-count="Machines">— Products</div>
+      </a>
+
+      <a href="#" class="shop-cat-item" data-category="Snacks">
+        <img src="assets/menu/top icon shop4.png" alt="Snacks" class="shop-cat-img">
+        <div class="shop-cat-title">Snacks</div>
+        <div class="shop-cat-count" data-cat-count="Snacks">— Products</div>
+      </a>
+
+      <a href="#" class="shop-cat-item" data-category="Accessories">
+        <img src="assets/menu/top icon shop5.png" alt="Accessories" class="shop-cat-img">
+        <div class="shop-cat-title">Accessories</div>
+        <div class="shop-cat-count" data-cat-count="Accessories">— Products</div>
+      </a>
+
+      <a href="#" class="shop-cat-item" data-category="Drinks">
+        <img src="assets/menu/top icon shop6.png" alt="Drinks" class="shop-cat-img">
+        <div class="shop-cat-title">Drinks</div>
+        <div class="shop-cat-count" data-cat-count="Drinks">— Products</div>
+      </a>
+
+      <a href="#" class="shop-cat-item view-all-category" id="viewAllCategories">
+        <div class="shop-cat-circle">
+          <i class="bi bi-arrow-right"></i>
+        </div>
+        <div class="shop-cat-title">View All</div>
+        <div class="shop-cat-count">Categories</div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+  <!-- 4. ABOUT SECTION -->
+  <section class="about-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-5 mb-5 mb-lg-0 fade-in-up">
+          <div class="section-label">ABOUT OUR COFFEE</div>
+          <h2 class="about-title">Not just coffee.<br>A lifestyle.</h2>
+          <p class="about-p">We believe coffee is more than a drink &mdash; it's a feeling. Carefully selected beans, ethically sourced, roasted to perfection, and crafted for the moments that matter.</p>
+          
+          <div class="about-features">
+            <div class="about-feature"><i class="bi bi-patch-check"></i> Ethically Sourced</div>
+            <div class="about-feature"><i class="bi bi-people"></i> Small Batches</div>
+            <div class="about-feature"><i class="bi bi-globe"></i> Better Tomorrow</div>
+          </div>
+          
+          <a href="about.html" class="btn btn-gold mt-3">Our Story &rarr;</a>
+        </div>
+        <div class="col-lg-6 offset-lg-1 fade-in-up">
+          <!-- Artistic Composition -->
+          <div class="about-composition">
+            <img src="assets/H.png" alt="Coffee Bag" class="main-bag">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. BEST SELLERS SECTION -->
+  <section class="best-sellers-section position-relative">
+    <div class="container">
+      <div class="best-sellers-header fade-in-up">
+        <div>
+          <div class="section-label text-gold">OUR BEST SELLERS</div>
+          <h2 class="section-title-light">Roasted for Real Taste</h2>
+        </div>
+        <div class="d-flex align-items-center gap-4">
+          <a href="shop.html" class="text-white text-decoration-none">View All Products &rarr;</a>
+          <div class="d-flex gap-2">
+            <button class="carousel-btn prev-btn"><i class="bi bi-chevron-left"></i></button>
+            <button class="carousel-btn next-btn"><i class="bi bi-chevron-right"></i></button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Grid Container -->
+      <div class="container fade-in-up">
+        <div class="row g-4" id="bestSellersTrack">
+          <!-- Product 1 (p1) -->
+          <div class="col-lg-3 col-md-6">
+            <div class="product-card" data-id="p1">
+              <button class="wishlist-btn" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+              <div class="product-img-wrapper">
+                <img src="assets/menu/coffee-product.webp" alt="Dominican Republic Single Origin">
+              </div>
+              <div class="product-info flex-grow-1 d-flex flex-column">
+                <h3 class="product-title">Dominican Republic Single Origin</h3>
+                <div class="product-subtitle">Dominican Republic</div>
+                <div class="d-flex justify-content-between align-items-center mt-auto pt-3">
+                  <div class="product-price">$12.00</div>
+                  <div class="product-rating"><i class="bi bi-star-fill"></i> 4.8 (320)</div>
+                </div>
+                <button class="add-to-cart-btn" aria-label="Add to cart" data-id="p1"><img src="assets/svg icon.svg" class="cart-svg-icon" alt="Add to cart"></button>
+              </div>
+            </div>
+          </div>
+          <!-- Product 2 (p2) -->
+          <div class="col-lg-3 col-md-6">
+            <div class="product-card" data-id="p2">
+              <button class="wishlist-btn" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+              <div class="product-img-wrapper">
+                <img src="assets/menu/coffee-product1.png" alt="Cadillac Mtn. Blend">
+              </div>
+              <div class="product-info flex-grow-1 d-flex flex-column">
+                <h3 class="product-title">Cadillac Mtn. Blend</h3>
+                <div class="product-subtitle">Brazil &amp; Guatemala</div>
+                <div class="d-flex justify-content-between align-items-center mt-auto pt-3">
+                  <div class="product-price">$14.00</div>
+                  <div class="product-rating"><i class="bi bi-star-fill"></i> 4.7 (215)</div>
+                </div>
+                <button class="add-to-cart-btn" aria-label="Add to cart" data-id="p2"><img src="assets/svg icon.svg" class="cart-svg-icon" alt="Add to cart"></button>
+              </div>
+            </div>
+          </div>
+          <!-- Product 3 (p3) -->
+          <div class="col-lg-3 col-md-6">
+            <div class="product-card" data-id="p3">
+              <button class="wishlist-btn" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+              <div class="product-img-wrapper">
+                <img src="assets/menu/coffee-product2.png" alt="Pinup Coffee Collection">
+              </div>
+              <div class="product-info flex-grow-1 d-flex flex-column">
+                <h3 class="product-title">Pinup Coffee Collection</h3>
+                <div class="product-subtitle">Various Origins</div>
+                <div class="d-flex justify-content-between align-items-center mt-auto pt-3">
+                  <div class="product-price">$16.00</div>
+                  <div class="product-rating"><i class="bi bi-star-fill"></i> 4.9 (410)</div>
+                </div>
+                <button class="add-to-cart-btn" aria-label="Add to cart" data-id="p3"><img src="assets/svg icon.svg" class="cart-svg-icon" alt="Add to cart"></button>
+              </div>
+            </div>
+          </div>
+          <!-- Product 4 (p4) -->
+          <div class="col-lg-3 col-md-6">
+            <div class="product-card" data-id="p4">
+              <button class="wishlist-btn" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+              <div class="product-img-wrapper">
+                <img src="assets/menu/coffee-product3.png" alt="Organic Coffee Beans">
+              </div>
+              <div class="product-info flex-grow-1 d-flex flex-column">
+                <h3 class="product-title">Organic Coffee Beans</h3>
+                <div class="product-subtitle">Premium Arabica</div>
+                <div class="d-flex justify-content-between align-items-center mt-auto pt-3">
+                  <div class="product-price">$11.00</div>
+                  <div class="product-rating"><i class="bi bi-star-fill"></i> 4.6 (190)</div>
+                </div>
+                <button class="add-to-cart-btn" aria-label="Add to cart" data-id="p4"><img src="assets/svg icon.svg" class="cart-svg-icon" alt="Add to cart"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. STATISTICS SECTION -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="row align-items-center fade-in-up">
+        <div class="col-12 col-md-6 col-lg-3 d-flex align-items-center justify-content-center">
+          <div class="stat-item w-100">
+            <div class="stat-icon"><i class="bi bi-cup-straw"></i></div>
+            <div class="stat-number" data-target="45" data-suffix="+">0</div>
+            <div class="stat-title">Origins Sourced</div>
+            <div class="stat-desc">From around the world</div>
+          </div>
+          <div class="stat-divider d-none d-lg-block"></div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 d-flex align-items-center justify-content-center">
+          <div class="stat-item w-100">
+            <div class="stat-icon"><i class="bi bi-emoji-smile"></i></div>
+            <div class="stat-number" data-target="29" data-suffix="K">0</div>
+            <div class="stat-title">Happy Customers</div>
+            <div class="stat-desc">Brewing smiles daily</div>
+          </div>
+          <div class="stat-divider d-none d-lg-block"></div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 d-flex align-items-center justify-content-center mt-4 mt-lg-0">
+          <div class="stat-item w-100">
+            <div class="stat-icon"><i class="bi bi-calendar-check"></i></div>
+            <div class="stat-number" data-target="8" data-suffix="">0</div>
+            <div class="stat-title">Years Roasting</div>
+            <div class="stat-desc">Passion in every cup</div>
+          </div>
+          <div class="stat-divider d-none d-lg-block"></div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 d-flex align-items-center justify-content-center mt-4 mt-lg-0">
+          <div class="stat-item w-100">
+            <div class="stat-icon"><i class="bi bi-award"></i></div>
+            <div class="stat-number" data-target="100" data-suffix="%">0</div>
+            <div class="stat-title">Natural Coffee</div>
+            <div class="stat-desc">Quality you can taste</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- 7. SPECIAL OFFER SECTION -->
+<section class="special-offer-section">
+  <div class="offer-img-side" style="background-image: url('assets/H2.png');">
+    <div class="offer-text-overlay fade-in-up">
+      Great<br>Coffee<br>Great<br>Ideas
+    </div>
+  </div>
+  <div class="offer-content-side">
+    <div class="fade-in-up position-relative z-1">
+      <div class="section-label">SPECIAL OFFER</div>
+      <h2 class="offer-title">
+        Free shipping<br>on orders over $45
+      </h2>
+      <p class="offer-desc">
+        Your favorite coffee, delivered to your door.
+        Made for good taste.
+      </p>
+      <a href="shop.html" class="btn btn-gold px-4 py-2">
+        Shop Now &rarr;
+      </a>
+    </div>
+
+    <img
+      src="assets/P15.png"
+      alt=""
+      class="offer-decorative-beans"
+    >
+  </div>
+</section>
+
+  <!-- 8. JOURNAL SECTION -->
+  <section class="journal-section">
+    <div class="container">
+      <div class="journal-header fade-in-up">
+        <div>
+          <div class="section-label">FROM OUR JOURNAL</div>
+          <h2 class="journal-title text-dark">Stories &amp; Brews</h2>
+          <p class="text-muted mt-2 mb-0">Tips, guides, and thoughts on coffee culture.</p>
+        </div>
+        <a href="journal.html" class="btn btn-gold">View All Articles &rarr;</a>
+      </div>
+      
+      <div class="row g-4 fade-in-up">
+        <div class="col-12 col-md-4">
+          <div class="journal-card">
+            <img src="assets/Home.png" alt="Coffee beans" class="journal-img">
+            <div class="journal-content">
+              <span class="journal-date">MAY 10, 2026</span>
+              <h3 class="journal-card-title">The Journey of a Coffee Bean</h3>
+              <a href="journal.html" class="journal-link">Read More &rarr;</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="journal-card">
+            <img src="assets/journal5.png" alt="Ground coffee" class="journal-img">
+            <div class="journal-content">
+              <span class="journal-date">MAY 7, 2026</span>
+              <h3 class="journal-card-title">Grinding Guide: Find Your Flavor</h3>
+              <a href="journal.html" class="journal-link">Read More &rarr;</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="journal-card">
+            <img src="assets/journal7.png" alt="Coffee dessert" class="journal-img">
+            <div class="journal-content">
+              <span class="journal-date">APR 30, 2026</span>
+              <h3 class="journal-card-title">Coffee &amp; Desserts: A Perfect Match</h3>
+              <a href="journal.html" class="journal-link">Read More &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <!-- Col 1 -->
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <a href="index.html" class="text-white text-decoration-none d-flex align-items-center mb-3" aria-label="COFYBREW Coffee Shop">
+            <img src="assets/Logo.png" alt="COFYBREW Coffee Shop Logo" class="footer-logo">
+          </a>
+          <div class="footer-logo-text mt-4">Crafted for<br>Brighter Days.</div>
+          <div class="social-icons mt-4">
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        
+        <!-- Col 2 -->
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0 mt-3 mt-lg-0">
+          <h5>Explore</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="journal.html">Journal</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        
+        <!-- Col 3 -->
+        <div class="col-lg-2 col-md-6 mb-4 mb-md-0 mt-3 mt-lg-0">
+          <h5>Support</h5>
+          <ul class="footer-links">
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Size Guide</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+        
+        <!-- Col 4 -->
+        <div class="col-lg-4 col-md-6 offset-lg-1 mt-3 mt-lg-0">
+          <h5>Stay in Touch</h5>
+          <p class="text-light" style="opacity:0.8; font-size:0.9rem;">Get the latest news, brewing guides, and special offers.</p>
+          <form id="newsletterForm" class="newsletter-form">
+            <input type="email" placeholder="Your email" required>
+            <button type="submit" aria-label="Subscribe">&rarr;</button>
+          </form>
+          <div id="newsletterSuccess" class="text-gold mt-2 d-none" style="font-size: 0.9rem;">Subscribed successfully!</div>
+        </div>
+      </div>
+      
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>&copy; 2026 COFYBREW. All rights reserved.</div>
+        <div class="d-flex flex-wrap gap-2 gap-md-3 justify-content-center mt-3 mt-md-0">
+          <span>123 Coffee Lane, Downtown</span>
+          <span class="d-none d-md-inline">&bull;</span>
+          <span>Open daily 7am &ndash; 10pm</span>
+          <span class="d-none d-md-inline">&bull;</span>
+          <span>+1 (234) 567-890</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Search Modal -->
+  <div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content border-0">
+        <div class="modal-body p-4 p-md-5">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h4 class="font-heading mb-0 text-dark">Search</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <form id="searchForm">
+            <div class="input-group input-group-lg mb-3">
+              <span class="input-group-text bg-white border-end-0"><i class="bi bi-search text-muted"></i></span>
+              <input type="text" class="form-control border-start-0 ps-0 shadow-none" id="searchInput" placeholder="Search for coffee, machines, articles...">
+            </div>
+          </form>
+          <div id="searchResults" class="mt-4">
+            <p class="text-muted small">Start typing to search...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Back to Top Button -->
+  <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top"><i class="bi bi-arrow-up"></i></a>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Products must load first -->
+  <script src="js/products.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/script.js"></script>
+
+  <!-- Dynamic category counts from products.js -->
+  <script>
+    (function() {
+      if (!window.cofyProducts) return;
+      document.querySelectorAll('[data-cat-count]').forEach(function(el) {
+        var cat = el.getAttribute('data-cat-count');
+        var count = window.cofyProducts.filter(function(p) { return p.category === cat; }).length;
+        el.textContent = count + ' Product' + (count !== 1 ? 's' : '');
+      });
+    })();
+  </script>
+</body>
+</html>

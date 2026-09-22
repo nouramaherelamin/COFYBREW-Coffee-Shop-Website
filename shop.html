@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="assets/svg icon.svg">
+  <title>Shop Coffee | COFYBREW</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/shop.css">
+</head>
+<body class="shop-page">
+
+  <!-- 1. NAVBAR -->
+    <!-- ==================== NAVBAR ==================== -->
+  <nav class="navbar navbar-expand-lg navbar-dark inner-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" aria-label="COFYBREW Home">
+        <img src="assets/Logo.png" alt="COFYBREW Logo" height="40">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="shop.html">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="journal.html">Journal</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="navbar-icons d-none d-lg-flex align-items-center">
+        <a href="#" aria-label="Search" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="bi bi-search"></i></a>
+        <a href="wishlist.html" aria-label="Wishlist"><i class="bi bi-heart navbar-heart-icon"></i></a>
+        <a href="login.html" aria-label="Account"><i class="bi bi-person"></i></a>
+        <a href="cart.html" aria-label="Cart" class="position-relative">
+          <i class="bi bi-cart3"></i>
+          <span class="cart-badge">0</span>
+        </a>
+        <a href="shop.html" class="btn btn-gold ms-3" style="font-size: 0.85rem; padding: 8px 16px;">Order Now &rarr;</a>
+      </div>
+    </div>
+  </nav>
+
+<!-- 2. SHOP HERO -->
+<section class="inner-page-hero" style="background-image: url('assets/anthor.png');" aria-label="Shop Hero">
+  <div class="inner-page-hero-overlay"></div>
+
+  <div class="container position-relative">
+    <div class="inner-page-hero-content">
+      <nav class="inner-page-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="bi bi-chevron-right" aria-hidden="true"></i>
+        <span aria-current="page">Shop</span>
+      </nav>
+      <h1>Our Coffee</h1>
+      <p>
+        Discover our carefully selected coffee beans, blends,<br class="d-none d-md-block">
+        and accessories for a better brewing experience.
+      </p>
+
+      <div class="shop-hero-decorative d-none d-md-block" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+
+  
+
+  <!-- 3. CATEGORY NAVIGATION -->
+  <div class="shop-category-bar">
+    <div class="container">
+      <div class="shop-category-wrapper" id="categoryContainer">
+        <a href="#" class="shop-cat-item" data-category="Coffee Beans">
+          <img src="assets/menu/top icon shop1.png" alt="Coffee Beans" class="shop-cat-img">
+          <div class="shop-cat-title">Coffee Beans</div>
+          <div class="shop-cat-count" data-cat-count="Coffee Beans">— Products</div>
+        </a>
+        <a href="#" class="shop-cat-item" data-category="Ground Coffee">
+          <img src="assets/menu/top icon shop2.png" alt="Ground Coffee" class="shop-cat-img">
+          <div class="shop-cat-title">Ground Coffee</div>
+          <div class="shop-cat-count" data-cat-count="Ground Coffee">— Products</div>
+        </a>
+        <a href="#" class="shop-cat-item" data-category="Machines">
+          <img src="assets/menu/top icon shop3.png" alt="Machines" class="shop-cat-img">
+          <div class="shop-cat-title">Machines</div>
+          <div class="shop-cat-count" data-cat-count="Machines">— Products</div>
+        </a>
+        <a href="#" class="shop-cat-item" data-category="Snacks">
+          <img src="assets/menu/top icon shop4.png" alt="Snacks" class="shop-cat-img">
+          <div class="shop-cat-title">Snacks</div>
+          <div class="shop-cat-count" data-cat-count="Snacks">— Products</div>
+        </a>
+        <a href="#" class="shop-cat-item" data-category="Accessories">
+          <img src="assets/menu/top icon shop5.png" alt="Accessories" class="shop-cat-img">
+          <div class="shop-cat-title">Accessories</div>
+          <div class="shop-cat-count" data-cat-count="Accessories">— Products</div>
+        </a>
+        <a href="#" class="shop-cat-item" data-category="Drinks">
+          <img src="assets/menu/top icon shop6.png" alt="Drinks" class="shop-cat-img">
+          <div class="shop-cat-title">Drinks</div>
+          <div class="shop-cat-count" data-cat-count="Drinks">— Products</div>
+        </a>
+        <a href="#" class="shop-cat-item border-0" id="viewAllCategories">
+          <div class="shop-cat-circle"><i class="bi bi-arrow-right"></i></div>
+          <div class="shop-cat-title">View All</div>
+          <div class="shop-cat-count">Categories</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. MAIN SHOP AREA -->
+  <div class="shop-main-area">
+    <div class="container py-5">
+      <div class="row">
+        
+        <!-- Mobile Filter Toggle -->
+        <div class="col-12 d-lg-none mb-4">
+          <button class="btn btn-shop-filter w-100 d-flex align-items-center justify-content-center gap-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#filterOffcanvas">
+            <i class="bi bi-sliders"></i> Filters
+          </button>
+        </div>
+
+        <!-- LEFT: Filters Sidebar (Desktop) -->
+        <div class="col-lg-3 d-none d-lg-block">
+          <div class="shop-sidebar">
+            <div class="sidebar-header d-flex align-items-center gap-2 mb-4">
+                <i class="bi bi-sliders text-coffee"></i>
+                <h4 class="mb-0 filter-heading">Filters</h4>
+            </div>
+
+            <!-- Categories Accordion -->
+            <div class="filter-group mb-4">
+                <h5 class="filter-group-title d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#collapseCategories" aria-expanded="true">
+                    Categories
+                    <i class="bi bi-chevron-up"></i>
+                </h5>
+                <div class="collapse show" id="collapseCategories">
+                    <div class="filter-group-body pt-2" id="filterCategoryContainer">
+                        <!-- Injected via JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Price Range -->
+            <div class="filter-group mb-4">
+                <h5 class="filter-group-title d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#collapsePrice" aria-expanded="true">
+                    Price Range
+                    <i class="bi bi-chevron-up"></i>
+                </h5>
+                <div class="collapse show" id="collapsePrice">
+                    <div class="filter-group-body pt-2">
+                        <input type="range" class="form-range custom-range" min="0" max="50" step="1" id="priceRangeFilter" value="50">
+                        <div class="d-flex justify-content-between range-labels mt-2">
+                            <span>$0</span>
+                            <span class="range-max fw-bold" id="priceRangeValue">$0 - $50</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Origin -->
+            <div class="filter-group mb-4">
+                <h5 class="filter-group-title d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#collapseOrigin" aria-expanded="true">
+                    Origin
+                    <i class="bi bi-chevron-up"></i>
+                </h5>
+                <div class="collapse show" id="collapseOrigin">
+                    <div class="filter-group-body pt-2" id="filterOriginContainer">
+                         <!-- Injected via JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Roast Level -->
+            <div class="filter-group mb-4">
+                <h5 class="filter-group-title d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#collapseRoast" aria-expanded="true">
+                    Roast Level
+                    <i class="bi bi-chevron-up"></i>
+                </h5>
+                <div class="collapse show" id="collapseRoast">
+                    <div class="filter-group-body pt-2" id="filterRoastContainer">
+                        <!-- Injected via JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rating -->
+            <div class="filter-group mb-4">
+                <h5 class="filter-group-title d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#collapseRating" aria-expanded="true">
+                    Rating
+                    <i class="bi bi-chevron-up"></i>
+                </h5>
+                <div class="collapse show" id="collapseRating">
+                    <div class="filter-group-body pt-2" id="filterRatingContainer">
+                        <!-- Injected via JS -->
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-clear-filters w-100" id="clearFiltersBtn">Clear Filters</button>
+
+          </div>
+        </div>
+
+        <!-- RIGHT: Products Section -->
+        <div class="col-lg-9">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4 pb-2 border-bottom">
+                <p class="mb-2 mb-md-0 text-muted" id="productsCountText">Showing 1–12 of 24 products</p>
+                <div class="d-flex align-items-center gap-2">
+                    <span class="text-muted small">Sort by:</span>
+                    <select class="form-select custom-sort-select shadow-none" id="sortSelect">
+                        <option value="featured">Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Rating</option>
+                        <option value="name-asc">Name A-Z</option>
+                        <option value="name-desc">Name Z-A</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- PRODUCT GRID -->
+            <div class="row g-4" id="productGrid">
+                <!-- Products injected via JS -->
+            </div>
+            
+            <div id="noProductsMsg" class="d-none text-center py-5">
+                <i class="bi bi-search fs-1 text-muted mb-3 d-block"></i>
+                <h4>No products found</h4>
+                <p class="text-muted">Try adjusting your filters or search term.</p>
+                <button class="btn btn-shop-filter mt-3" onclick="document.getElementById('clearFiltersBtn').click()">Clear Filters</button>
+            </div>
+
+            <!-- 5. PAGINATION -->
+            <div class="shop-pagination mt-5" id="paginationContainer">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. FEATURED COFFEE BANNER -->
+  <section class="shop-featured-banner">
+    <div class="container">
+      <div class="featured-banner-card">
+        <div class="row align-items-center">
+            <div class="col-md-6 p-4 p-md-5 featured-banner-content">
+                <span class="featured-label">Featured Coffee</span>
+                <h2 class="featured-title">Ethiopia<br>Yirgacheffe Celinga</h2>
+                <p class="featured-desc">A rare, floral coffee with bright citrus notes, delicate sweetness, and a smooth finish.</p>
+                
+                <div class="featured-traits d-flex gap-4 mb-4">
+                    <div class="trait d-flex align-items-center gap-2"><i class="bi bi-check-circle text-coffee"></i> <span class="small">100% Arabica</span></div>
+                    <div class="trait d-flex align-items-center gap-2"><i class="bi bi-globe text-coffee"></i> <span class="small">Ethically Sourced</span></div>
+                    <div class="trait d-flex align-items-center gap-2"><i class="bi bi-box-seam text-coffee"></i> <span class="small">Small Batches</span></div>
+                </div>
+
+                <div class="d-flex align-items-center gap-4">
+                    <span class="featured-price font-heading fw-bold fs-3 text-dark">$14.50</span>
+                    <button class="btn btn-solid-coffee px-4 py-2 add-to-cart-btn" data-id="p65">Add to Cart &rarr;</button>
+                </div>
+            </div>
+            <div class="col-md-6 featured-banner-image-wrapper">
+                <img src="assets/menu/photo shop1.png" alt="Ethiopia Yirgacheffe" class="featured-product-img">
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. POPULAR FLAVORS -->
+  <section class="popular-flavors bg-cream-light py-5">
+      <div class="container">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+              <h2 class="section-heading mb-0">Popular Flavors</h2>
+              <div class="carousel-nav gap-2 d-none d-md-flex">
+                  <button class="btn-carousel" id="flavorsPrev"><i class="bi bi-arrow-left"></i></button>
+                  <button class="btn-carousel" id="flavorsNext"><i class="bi bi-arrow-right"></i></button>
+              </div>
+          </div>
+          
+          <div class="flavors-carousel-container">
+              <div class="flavors-track" id="flavorsTrack">
+                  <!-- Cards -->
+                  <div class="flavor-card">
+                      <div class="flavor-img-wrap"><img src="assets/menu/flaver icon1.png" alt="Vanilla"></div>
+                      <span class="flavor-name">Vanilla</span>
+                  </div>
+                  <div class="flavor-card">
+                      <div class="flavor-img-wrap"><img src="assets/menu/flaver icon2.png" alt="Caramel"></div>
+                      <span class="flavor-name">Caramel</span>
+                  </div>
+                  <div class="flavor-card">
+                      <div class="flavor-img-wrap"><img src="assets/menu/flaver icon3.png" alt="Chocolate"></div>
+                      <span class="flavor-name">Chocolate</span>
+                  </div>
+                  <div class="flavor-card">
+                      <div class="flavor-img-wrap"><img src="assets/menu/flaver icon4.png" alt="Hazelnut"></div>
+                      <span class="flavor-name">Hazelnut</span>
+                  </div>
+                  <div class="flavor-card">
+                      <div class="flavor-img-wrap"><img src="assets/menu/flaver icon5.png" alt="Cinnamon"></div>
+                      <span class="flavor-name">Cinnamon</span>
+                  </div>
+                  <div class="flavor-card">
+                      <div class="flavor-img-wrap"><img src="assets/menu/flaver icon6.png" alt="Original"></div>
+                      <span class="flavor-name">Original</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+<!-- 8. COLLECTION BANNER -->
+  <section class="collection-banner">
+    <div class="container">
+      <div class="collection-banner-inner">
+        <div class="collection-overlay"></div>
+        <div class="collection-content position-relative z-2">
+          <span class="collection-label">Collection</span>
+          <h2 class="collection-title">Beautiful Coffee Moments</h2>
+          <p class="collection-desc">Explore our special collection of premium blends.</p>
+          <a href="#product-grid" class="btn btn-solid-gold collection-btn">Shop Collection &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. RECENT PRODUCTS -->
+  <section class="recent-products py-5">
+      <div class="container">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+              <h2 class="section-heading mb-0">Recent Products</h2>
+              <div class="carousel-nav gap-2 d-none d-md-flex">
+                  <button class="btn-carousel" id="recentPrev"><i class="bi bi-arrow-left"></i></button>
+                  <button class="btn-carousel" id="recentNext"><i class="bi bi-arrow-right"></i></button>
+              </div>
+          </div>
+
+          <div class="recent-carousel-container">
+              <div class="recent-track" id="recentTrack">
+                  <!-- Injected via JS from data -->
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- 10. NEWSLETTER SECTION -->
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer-overlay"></div>
+    <div class="container position-relative z-2">
+      <div class="row">
+        <!-- Brand -->
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <a href="index.html" class="text-white text-decoration-none d-flex align-items-center gap-2 mb-3">
+            <img src="assets/Logo.png" alt="COFYBREW Logo" height="40">
+          </a>
+          <div class="footer-logo-text mt-4">Crafted for<br>Brighter Days.</div>
+          <div class="social-icons mt-3">
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Twitter X"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <!-- Explore -->
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0 mt-3 mt-lg-0">
+          <h5>Explore</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="journal.html">Journal</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Support -->
+        <div class="col-lg-2 col-md-6 mb-4 mb-md-0 mt-3 mt-lg-0">
+          <h5>Support</h5>
+          <ul class="footer-links">
+            <li><a href="contact.html#faqSection">FAQ</a></li>
+            <li><a href="contact.html">Shipping Info</a></li>
+            <li><a href="contact.html">Returns</a></li>
+            <li><a href="shop.html">Size Guide</a></li>
+            <li><a href="contact.html">Privacy Policy</a></li>
+            <li><a href="contact.html">Terms of Service</a></li>
+          </ul>
+        </div>
+        <!-- Stay in Touch -->
+        <div class="col-lg-4 col-md-6 offset-lg-1 mt-3 mt-lg-0">
+          <h5>Stay in Touch</h5>
+          <p class="text-light" style="opacity:0.8; font-size:0.9rem;">Get the latest news, brewing guides, and special offers.</p>
+          <form class="newsletter-form" id="footerNewsletterForm">
+            <input type="email" placeholder="Your email" aria-label="Email address" required>
+            <button type="submit" aria-label="Subscribe"><i class="bi bi-arrow-right"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 COFYBREW. All rights reserved.</div>
+        <div class="footer-credits">
+          <span>Created & Developed by <a href="https://www.linkedin.com/in/nouramaherelamin/" target="_blank" rel="noopener noreferrer">Noura Maher Elamin</a></span>
+          <a href="https://github.com/nouramaherelamin" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="bi bi-github"></i> GitHub</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SEARCH MODAL -->
+  <div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content border-0">
+        <div class="modal-body p-4 p-md-5">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h4 class="mb-0 font-heading">What are you looking for?</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <form id="searchForm">
+            <div class="input-group input-group-lg mb-3">
+              <span class="input-group-text bg-white border-end-0"><i class="bi bi-search text-muted"></i></span>
+              <input type="search" class="form-control border-start-0 ps-0 shadow-none" id="searchInput" placeholder="Search coffee, beans, accessories..." required>
+            </div>
+          </form>
+          <div id="searchResults" class="mt-4">
+            <p class="text-muted small">Start typing to search...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 12. BACK TO TOP BUTTON -->
+  <button id="backToTop" class="back-to-top-btn" aria-label="Back to top">
+      <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- CART OFFCANVAS (Simple Mock) -->
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm modal-dialog-scrollable" style="margin-right: 0; margin-top: 0; height: 100vh; right: 0; position: absolute;">
+      <div class="modal-content border-0 h-100 rounded-0 shadow-lg">
+        <div class="modal-header border-bottom">
+            <h5 class="modal-title font-heading fw-bold">Your Cart</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4" id="cartItemsContainer">
+            <p class="text-muted text-center mt-5">Your cart is empty.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOBILE FILTER OFFCANVAS -->
+  <div class="offcanvas offcanvas-start shop-mobile-filter" tabindex="-1" id="filterOffcanvas">
+    <div class="offcanvas-header border-bottom">
+      <h5 class="offcanvas-title font-heading fw-bold d-flex align-items-center gap-2"><i class="bi bi-sliders text-coffee"></i> Filters</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body" id="mobileFilterBody">
+      <!-- Cloned from desktop sidebar via JS -->
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Products first, then shared, then page-specific -->
+  <script src="js/products.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/shop.js"></script>
+
+  <!-- Dynamic category counts from products.js -->
+  <script>
+    (function() {
+      if (!window.cofyProducts) return;
+      document.querySelectorAll('[data-cat-count]').forEach(function(el) {
+        var cat = el.getAttribute('data-cat-count');
+        var count = window.cofyProducts.filter(function(p) { return p.category === cat; }).length;
+        el.textContent = count + ' Product' + (count !== 1 ? 's' : '');
+      });
+    })();
+  </script>
+</body>
+</html>
