@@ -125,15 +125,15 @@ Since this is a static front-end project, no build tools or dependencies are req
 
 ---
 
-## 👩‍💻 Author
-
+## 👤 Author
+<div align="center">
+  
 **Noura Maher Elamin**
-Computer & Information Systems student, Egyptian Chinese University
 
-- GitHub: [@nouramaherelamin](https://github.com/nouramaherelamin)
-- LinkedIn: [nouramaherelamin](https://www.linkedin.com/in/nouramaherelamin/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-0A66C2?style=for-the-badge\&logo=linkedin\&logoColor=white)](https://www.linkedin.com/in/nouramaherelamin/)
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge\&logo=github\&logoColor=white)](https://github.com/nouramaherelamin)
 
----
+</div>
 
 ## 📄 License
 
