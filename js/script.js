@@ -223,10 +223,8 @@ window.showPrompt = function(message) {
     }
     setCart(cart);
     
-    // Show toast if on shop page, or minimal alert elsewhere
-    if (document.getElementById('shopAddedToast')) {
-        // shop.js will handle toast
-    } else {
+    // Show notification only if shop.js is NOT managing its own toast
+    if (!window._shopManagesNotification) {
         showNotification(item.name + ' added to cart!', 'success');
     }
     return cart;
@@ -301,6 +299,9 @@ window.showPrompt = function(message) {
   function initWishlistButtons() {
     document.querySelectorAll('.wishlist-btn').forEach(function (btn) {
       if(btn.classList.contains('shop-managed')) return;
+      // Guard: skip already-bound buttons to prevent duplicate listeners
+      if (btn.dataset.wishlistBound) return;
+      btn.dataset.wishlistBound = '1';
 
       var card = btn.closest('[data-id]');
       if (!card) return;
@@ -332,6 +333,9 @@ window.showPrompt = function(message) {
   function initAddToCartButtons() {
     document.querySelectorAll('.add-to-cart-btn, .btn-add-cart-circle').forEach(function (btn) {
       if (btn.classList.contains('shop-managed')) return;
+      // Guard: skip already-bound buttons to prevent duplicate listeners
+      if (btn.dataset.cartBound) return;
+      btn.dataset.cartBound = '1';
 
       btn.addEventListener('click', function (e) {
         e.preventDefault();

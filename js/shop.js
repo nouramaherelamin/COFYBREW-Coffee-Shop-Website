@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Signal to script.js that shop.js manages its own cart notifications
+    window._shopManagesNotification = true;
+
     // ----------------------------------------------------
     // 1. DATA 
     // ----------------------------------------------------
